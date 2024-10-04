@@ -4,9 +4,9 @@ const { headerContainer, headerLogo } = styles;
 
 const Header = () => {
   return (
-    <header className={headerContainer}>
-      <div className={headerLogo}>
-        <h1>
+    <header>
+      <div className={headerContainer}>
+        <h1 className={headerLogo}>
           <span>Our</span>
           <Badge bg="info">Ecom</Badge>
         </h1>
