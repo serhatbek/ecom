@@ -1,5 +1,6 @@
 import { Badge, Container, Nav, Navbar } from "react-bootstrap";
 import styles from "./styles.module.scss";
+import { HeaderBasket } from "../../ecommerce";
 const { headerContainer, headerLogo } = styles;
 
 const Header = () => {
@@ -8,10 +9,10 @@ const Header = () => {
       <div className={headerContainer}>
         <h1 className={headerLogo}>
           <span>Our</span>
-          <Badge bg="info">Ecom</Badge>
+          <Badge bg="info">eCom</Badge>
         </h1>
 
-        {/* basket */}
+        <HeaderBasket />
       </div>
 
       <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
