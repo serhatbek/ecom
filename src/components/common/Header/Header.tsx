@@ -15,7 +15,7 @@ const Header = () => {
 
         <HeaderBasket />
       </div>
-
+      {/* nav link end */}
       <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
         <Container>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -5,3 +5,5 @@ export { default as AboutUs } from "./AboutUs/AboutUs";
 
 export { default as Login } from "./Login/Login";
 export { default as Register } from "./Register/Register";
+
+export { default as ErrorPage } from "./ErrorPage/ErrorPage";

@@ -3,6 +3,7 @@ import { MainLayout } from "@layouts/index";
 import {
   AboutUs,
   Categories,
+  ErrorPage,
   Home,
   Login,
   Products,
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
