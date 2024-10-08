@@ -1,13 +1,11 @@
 import { Container } from "react-bootstrap";
 import styles from "./styles.module.scss";
-import { Link, useRouteError, Navigate } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 const { notFound } = styles;
 
 const ErrorPage = () => {
   let error = useRouteError();
-
-  console.log(useRouteError());
 
   return (
     <Container className={notFound}>
