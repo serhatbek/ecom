@@ -1,6 +1,6 @@
 import { Badge, Container, Nav, Navbar } from "react-bootstrap";
 import styles from "./styles.module.scss";
-import { HeaderBasket } from "../../ecommerce";
+import { HeaderBasket } from "@components/ecommerce";
 const { headerContainer, headerLogo } = styles;
 
 const Header = () => {
