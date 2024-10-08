@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import styles from "./styles.module.scss";
 import { Footer, Header } from "@components/common";
+import { Outlet } from "react-router-dom";
 
 const { container, wrapper } = styles;
 
@@ -8,7 +9,9 @@ const MainLayout = () => {
   return (
     <Container className={container}>
       <Header />
-      <div className={wrapper}></div>
+      <div className={wrapper}>
+        <Outlet />
+      </div>
       <Footer />
     </Container>
   );
