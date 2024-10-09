@@ -1,5 +1,19 @@
+import styles from "./styles.module.scss";
+
+const { category, categoryImg, categoryTitle } = styles;
+
 const Category = () => {
-  return <div>Category</div>;
+  return (
+    <div className={category}>
+      <figure className={categoryImg}>
+        <img
+          src="https://cdn-eu.dynamicyield.com/api/9876644/images/244c68ad42d8b__hp-w12-22032022-h_m-women_shirts-blouses.jpg"
+          alt=""
+        />
+      </figure>
+      <h4 className={categoryTitle}>Title</h4>
+    </div>
+  );
 };
 
 export default Category;
