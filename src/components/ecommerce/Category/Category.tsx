@@ -7,7 +7,7 @@ const { category, categoryImg, categoryTitle } = styles;
 const Category = ({ title, prefix, img }: TCategory) => {
   return (
     <div className={category}>
-      <Link to={`categories/products/${prefix}`}>
+      <Link to={`products/${prefix}`}>
         <figure className={categoryImg}>
           <img src={img} alt={title} />
         </figure>
