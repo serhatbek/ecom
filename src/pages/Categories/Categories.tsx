@@ -11,7 +11,9 @@ const Categories = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(actGetCategories());
+    if (!records.length) {
+      dispatch(actGetCategories());
+    }
   }, [dispatch]);
 
   const categoryList =
