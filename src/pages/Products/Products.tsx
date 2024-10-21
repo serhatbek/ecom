@@ -8,6 +8,7 @@ import {
 import { useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import { Loading } from "@components/feedback";
 
 const Products = () => {
   const { error, loading, records } = useAppSelector((state) => state.products);
@@ -36,7 +37,9 @@ const Products = () => {
       : "";
   return (
     <Container>
-      <Row>{productList}</Row>
+      <Loading status={loading} error={error}>
+        <Row>{productList}</Row>
+      </Loading>
     </Container>
   );
 };

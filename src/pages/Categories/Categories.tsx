@@ -3,6 +3,7 @@ import { Category } from "@components/ecommerce";
 import { useAppDispatch, useAppSelector } from "@store/hooks";
 import { useEffect } from "react";
 import { actGetCategories } from "@store/categories/categorySlice";
+import { Loading } from "@components/feedback";
 
 const Categories = () => {
   const { error, loading, records } = useAppSelector(
@@ -31,7 +32,9 @@ const Categories = () => {
 
   return (
     <Container>
-      <Row>{categoryList}</Row>
+      <Loading status={loading} error={error}>
+        <Row>{categoryList}</Row>
+      </Loading>
     </Container>
   );
 };
