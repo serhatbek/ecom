@@ -6,9 +6,11 @@ import {
   productsCleanUp,
 } from "@store/products/productsSlice";
 import { useEffect } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Loading } from "@components/feedback";
+import { GridList } from "@components/common";
+import { TProduct } from "@customTypes/product";
 
 const Products = () => {
   const { error, loading, records } = useAppSelector((state) => state.products);
@@ -23,22 +25,13 @@ const Products = () => {
     };
   }, [dispatch, params]);
 
-  const productList =
-    records.length > 0
-      ? records.map((record) => (
-          <Col
-            xs={3}
-            key={record.id}
-            className="d-flex justify-content-center mb-5 mt-2"
-          >
-            <Product {...record} />
-          </Col>
-        ))
-      : "";
   return (
     <Container>
       <Loading status={loading} error={error}>
-        <Row>{productList}</Row>
+        <GridList<TProduct>
+          records={records}
+          renderItem={(record) => <Product {...record} />}
+        />
       </Loading>
     </Container>
   );

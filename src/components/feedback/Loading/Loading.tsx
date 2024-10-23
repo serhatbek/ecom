@@ -1,5 +1,4 @@
 import { TLoading } from "@customTypes/shared";
-import styles from "./styles.module.scss";
 
 type LoadingProps = {
   status: TLoading;

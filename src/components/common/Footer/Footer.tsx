@@ -3,11 +3,7 @@ const { footerContainer } = styles;
 
 const Footer = () => {
   return (
-    <footer>
-      <div className={footerContainer}>
-        @ 2024 Our eCom. All right reserved.
-      </div>
-    </footer>
+    <div className={footerContainer}>© 2024 Our Ecom. All rights reserved.</div>
   );
 };
 
